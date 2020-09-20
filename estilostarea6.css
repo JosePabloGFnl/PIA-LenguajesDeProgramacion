@@ -1,0 +1,47 @@
+p{
+  font-size: 30 px
+}
+
+.haskell{
+  width: 824px;
+  height: 600px;
+}
+.simbolos{
+  width: 530px;
+  height: 210px;
+}
+.haskell2{
+  width: 462px;
+  height: 206px;
+}
+.poli{
+  width: 620px;
+  height: 300px;
+}
+.prog{
+  width: 550px;
+  height: 370px;
+}
+.sintaxis{
+  width: 400px;
+  height: 200px;
+}
+.esqueletohaskell{
+  width: 520px;
+  height: 264px;
+}
+.leksah{
+  width: 694px;
+  height: 464px;
+}
+.funcional{
+  width: 576px;
+  height: 324px;
+}
+.programahaskell{
+  width: 656px;
+  height: 332px;
+}
+body{
+  background-image:url(../imágenes/fondo.jpg);
+}

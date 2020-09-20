@@ -1,0 +1,47 @@
+p{
+  font-size: 30 px
+}
+
+.r{
+  width: 490px;
+  height: 300px;
+}
+.simbolos{
+  width: 530px;
+  height: 210px;
+}
+.numeros{
+  width: 300px;
+  height: 300px;
+}
+.sintaxisr{
+  width: 440px;
+  height: 224px;
+}
+.esqueletor{
+  width: 370px;
+  height: 217px;
+}
+.sintaxis{
+  width: 400px;
+  height: 200px;
+}
+.rstudio{
+  width: 660px;
+  height: 350px;
+}
+.objetos{
+  width: 579px;
+  height: 249px;
+}
+.funcional{
+  width: 579px;
+  height: 324px;
+}
+.prog{
+  width: 550px;
+  height: 370px;
+}
+body{
+  background-image:url(../imágenes/fondo.jpg);
+}

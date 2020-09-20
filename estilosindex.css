@@ -1,0 +1,18 @@
+p{
+  font-size: 30 px
+  /*color:grey;*/
+  /*display: inline;*/
+}
+
+.alumno{
+  width: 340px;
+  height: 660px;
+  /*vertical-align: middle;*/
+}
+
+.tareas{
+  /*align = right;*/
+}
+body{
+  background-image:url(../imágenes/fondo.jpg);
+}

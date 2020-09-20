@@ -1,0 +1,47 @@
+p{
+  font-size: 30 px
+}
+
+.prog{
+  width: 550px;
+  height: 370px;
+}
+.codigoenjava{
+  width: 474px;
+  height: 512px;
+}
+.compilados{
+  width: 550px;
+  height: 515px;
+}
+.objetos2{
+  width: 654px;
+  height: 293px;
+}
+.imperativo{
+  width: 545px;
+  height: 240px;
+}
+.declarativo{
+  width: 259px;
+  height: 197px;
+}
+.problema{
+  width: 480px;
+  height: 300px;
+}
+.natural{
+  width: 250px;
+  height: 249px;
+}
+.objetos{
+  width: 379px;
+  height: 149px;
+}
+.ruby{
+  width: 260px;
+  height: 260px;
+}
+body{
+  background-image:url(../imágenes/fondo.jpg);
+}

@@ -1,0 +1,47 @@
+p{
+  font-size: 30 px
+}
+
+.prolog2{
+  width: 270px;
+  height: 186px;
+}
+.simbolos{
+  width: 530px;
+  height: 210px;
+}
+.numeros{
+  width: 300px;
+  height: 300px;
+}
+.aritmeticos{
+  width: 300px;
+  height: 300px;
+}
+.relacionales{
+  width: 350px;
+  height: 125px;
+}
+.sintaxis{
+  width: 400px;
+  height: 200px;
+}
+.esqueletoprolog{
+  width: 528px;
+  height: 389px;
+}
+.lenguajeprolog{
+  width: 578px;
+  height: 404px;
+}
+.pdt{
+  width: 560px;
+  height: 247px;
+}
+.logicos{
+  width: 227px;
+  height: 200px;
+}
+body{
+  background-image:url(../imágenes/fondo.jpg);
+}
