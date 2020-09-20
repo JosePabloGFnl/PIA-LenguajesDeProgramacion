@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<link rel="stylesheet"type="text/css"href="CSS/estilostarea5.css">
+ <head>
+<title>Tarea 5</title>
+<meta charset="utf-8">
+ </head>
+ <body>
+   <center><h1>Tarea 5. Scheme</h1></center>
+   <center><img class="scheme" src = "imágenes/scheme.jpg"></center>
+
+   <h2>Símbolos</h2>
+   <center><img class="simbolos" src = "imágenes/simbolos.jpg"></center>
+<p></p>
+   <p>Booleanos</p>
+   <center><img class="booleanos" src = "imágenes/booleanos.jpg"></center>
+   <p>Un booleano es un valor de verdad, que puede ser verdadero o falso. En Scheme, tenemos los símbolos #t y #f para expresar verdadero y falso respectivamente, pero en muchas operaciones se considera que cualquier valor distinto de #f es verdadero.</p>
+   <p></p>
+   <p>#t ;verdadero</p>
+   <p>#f ;falso </p>
+   <p>(> 3 1.5)</p>
+   <p>(= 3 3.0)</p>
+   <p>(equal? 3 3.0)</p>
+   <p>(or ( 3 1.5) #t)</p>
+   <p>(and #t #t #f)</p>
+   <p>(not #f)</p>
+   <p>(not 3)</p>
+   <p></p>
+   <p>Números</p>
+   <p></p>
+   <p>La cantidad de tipos numéricos que soporta Scheme es grande, incluyendo enteros de diferente precisión, números racionales, complejos e inexactos. Un número exacto es un objeto que corresponde a un número que se ha obtenido mediante operaciones exaactas y un número inexacto es el resultado de una operación que ha incluido redondeos o otras aproximaciones. Sólo vamos a ver una pequeña parte de los números.</p>
+   <p></p>
+   <p>number</p>
+   <p>complex</p>
+   <p>real</p>
+   <p>rational</p>
+   <p>integer</p>
+   <p></p>
+   <p>Algunas primitivas sobre números</p>
+   <p></p>
+   <p>(<= 2 3 3 4 5)</p>
+   <p>(max 3 5 10 1000)</p>
+   <p>(/ 22 4)</p>
+   <p>(quotient 22 4)</p>
+   <p>(remainder 22 4)</p>
+   <p>(equal? 0.5 (/ 1 2))</p>
+   <p>(= 0.5 (/ 1 2))</p>
+   <p>(abs (* 3 -2))</p>
+   <p>(sin 2.2) ; relacionados: cos, tan, asin, acos, atan</p>
+   <p>Primitivas que devuelven números inexactos</p>
+   <p></p>
+   <ul>
+<li>(floor x) devuelve el entero más grande no mayor que x</li>
+<li>(ceiling x) devuelve el entero más pequeño no menor que x</li>
+<li>(truncate x) devuelve el entero más cercano a x cuyo valor absoluto no es mayor que el valor absoluto de x</li>
+<li>(round x) devuelve el entero más cercano a x, redondeado</li>
+<li>(floor -4.3)    ;-5.0</li>
+<li>(floor 3.5)     ;3.0</li>
+<li>(ceiling -4.3)  ;-4.0 </li>
+<li>(ceiling 3.5)   ;4.0</li>
+<li>(truncate -4.3) ;-4.0</li>
+<li>(truncate 3.5)  ;3.0</li>
+<li>(round -4.3)    ;-4.0</li>
+<li>(round 3.5)     ;4.0</li>
+     </ul>
+     <p></p>
+
+   <p>Operadores sobre números</p>
+   <center><img class="numeros" src = "imágenes/numeros.jpg"></center>
+   <p>(number? 1)</p>
+   <p>(integer? 2.3)</p>
+   <p>(integer? 4.0)</p>
+   <p>(real? 1)</p>
+   <p>(positive? -4)</p>
+   <p>(negative? -4)</p>
+   <p>(zero? 0.2)</p>
+   <p>(infinite? 2.0)</p>
+   <p>(finite? +inf.0)</p>
+   <p>(even? 2)</p>
+   <p>(odd? 3)</p>
+   <p>(exact? 5) </p>
+   <p>(inexact? +inf.0) </p>
+   <p></p>
+
+   <p>Carácteres</p>
+   <p></p>
+   <p>#\a</p>
+   <p>#\A</p>
+   <p>#\space</p>
+   <p>#\ñ</p>
+   <p>#\á</p>
+   <p>Se soportan caracteres internacionales y se codifican en UTF-8</p>
+   <p>(char<? #\a #\b)</p>
+   <p>(char-numeric? \#1) ; relacionados: char-alphabetic?</p>
+   <p>; char-whitespace?, char-upper-case?</p>
+   <p>; char-lower-case?</p>
+   <p>(char-upcase #\ñ)</p>
+   <p>(char->integer #\space)</p>
+   <p>(integer->char 32) ;#\space</p>
+   <p>(char->integer (integer->char 5000))</p>
+   <p></p>
+   <p>Cadenas</p>
+   <p></p>
+   <center><img class="cadenas" src = "imágenes/cadenas.jpg"></center>
+   <p></p>
+   <p>Las cadenas son secuencias finitas de caracteres.</p>
+   <p>"hola"</p>
+   <p>"La palabra \"hola\" tiene 4 letras"</p>
+   <p></p>
+
+   <h2>Sintáxis</h2>
+   <center><img class="sintaxis" src = "imágenes/sintaxis.jpg"></center>
+   <p>Scheme posee una sintaxis reducida comparada a otros lenguajes. Utiliza la notación prefija. Por ejemplo, si se desea realizar la suma 1+1, se debe programar la siguiente instrucción</p>
+   <p>(+ 1 1) </p>
+   <p>Los paréntesis son obligatorios, ya que separan las instrucciones que serán evaluadas por el intérprete. Para realizar comentarios dentro del código, se utiliza el ";", así se marca que toda la línea será de comentario Ejemplo:</p>
+   <p>;Esta línea es un comentario, y la orden de abajo es ejecutada </p>
+   <p>(+ 1 1)</p>
+   <p></p>
+   <p>Sintaxis Básica</p>
+   <p>Expresión -> átomo | lista</p>
+   <p>átomo -> número | string | identificador | carácter | boolean</p>
+   <p>lista -> '(' secuencia-expresión ')'</p>
+   <p>secuencia-expresión -> expresión secuencia - expresión | expresión</p>
+   <p>función -> ( nombre_función argumento1 argumento 2... argumento n)</p>
+  <p></p>
+
+
+  <h2>Esqueleto de los programas</h2>
+   <p>Este es un ejemplo de un programa que imprime un triángulo, con algunos comentarios con ";" para explicar las líneas:</p>
+     <center><img class="esqueletoscheme" src = "imágenes/esqueletoscheme.jpg"></center>
+   <p>(define (T) ;lo que hacemos con esta función es la figura con la que se ;llenara el triángulo</p>
+<p>(display "*"))</p>
+<p>(define (dibuje cant) ;esta funcion me dibuja los "*" pasando un espacio :entre ellos</p>
+<p>(do ((i 0 (+ i 1)))</p>
+<p> ((= i cant) )</p>
+<p>(t)</p>
+<p> (display " ")))</p>
+<p>(define (triangulo) ;y esta es la que me dibuja el triangulo aquí defino ;que el tamaño sea de 10 *'s</p>
+<p>   (do ((i 1 (+ i 1)));observa como se hace el ciclo</p>
+<p>         ((= i 10) )</p>
+<p>     (dibuje i);llamada a la funcion</p>
+<p>     (newline)));pasa renglon</p>
+
+
+   <p></p>
+<h2>Aplicación a descargar para editar y ejecutar:</h2>
+   <p>Racket</p>
+   <li><a href="https://racket-lang.org/" target = "_blank">Sitio web para la instalación de Racket</a></li>
+   <center><img class="racket" src = "imágenes/racket.jpg"></center>
+   <p></p>
+<h2>A qué tipo de paradigma pertenece</h2>
+  <p>Multi-paradigma</p>
+<center><img class="multiparadigma" src = "imágenes/multiparadigma.jpg"></center>
+<h2>Un ejemplo de un programa escrito en ese lenguaje</h2>
+   <p>(define (T) </p>
+   <p>(display "*"))</p>
+   <p>(define (dibuje cant)</p>
+   <p>   (do ((i 0 (+ i 1)))</p>
+   <p>       ((= i cant) )</p>
+   <p>     (t)</p>
+   <p>     (display " ")))</p>
+   <p>(define (triangulo)</p>
+   <p>   (do ((i 1 (+ i 1)))</p>
+   <p>         ((= i 10) )</p>
+   <p>     (dibuje i)</p>
+   <p>     (newline)))</p>
+   <p></p>
+<center><img class="programascheme" src = "imágenes/programascheme.jpg"></center>
+   <p></p>
+
+
+   <br><br><hr><br><br>
+   <center><p>Bibliografía</p></center>
+   <ul>
+     <li><a href="http://www.dccia.ua.es/dccia/inf/asignaturas/LPP/2010-2011/teoria/tema2.html#:~:text=3.6%20S%C3%ADmbolos,Unicode%2C%20UTF%2D8)." target = "_blank">http://www.dccia.ua.es/dccia/inf/asignaturas/LPP/2010-2011/teoria/tema2.html#:~:text=3.6%20S%C3%ADmbolos,Unicode%2C%20UTF%2D8).</a></li>
+     <li><a href="https://www.ecured.cu/Scheme#Sintaxis" target = "_blank">https://www.ecured.cu/Scheme#Sintaxis</a></li>
+     <li><a href="http://ceciliaurbina.blogspot.com/2010/11/scheme.html" target = "_blank">http://ceciliaurbina.blogspot.com/2010/11/scheme.html</a></li>
+   </ul>
+   <br><br><hr><br><br>
+
+   <a href="Tareas.html">Menú de Tareas</a>
+   <a href="Tarea6.html">Siguiente Tarea</a>
+   <a href="Tarea4.html">Tarea Anterior</a>
+ </body>
+</html>

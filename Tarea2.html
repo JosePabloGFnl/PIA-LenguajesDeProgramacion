@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<link rel="stylesheet"type="text/css"href="CSS/estilostarea2.css">
+ <head>
+<title>Tarea 2</title>
+<meta charset="utf-8">
+ </head>
+ <body>
+   <center><h1>Tarea 2. Lenguaje de Programación</h1></center>
+   <p>Un lenguaje de programación es un conjunto de símbolos y códigos usados para orientar la programación de estructuras en el desarrollo web. Es un lenguaje formal que, mediante una serie de instrucciones, le permite a un programador escribir un conjunto de órdenes, acciones consecutivas, datos y algoritmos para, de esa forma, crear programas que controlen el comportamiento físico y lógico de una máquina.</p>
+
+   <center><img class="prog" src = "imágenes/prog.jpg"></center>
+   <p>Mediante este lenguaje se comunican el programador y la máquina, permitiendo especificar, de forma precisa, aspectos como:</p>
+   <ul>
+   <li>Cuáles datos debe operar un software específico.</li>
+   <li>Cómo deben ser almacenados o transmitidos esos datos.</li>
+   <li>Las acciones que debe tomar el software dependiendo de las circunstancias variables.</li>
+   </ul>
+   <center><img class="codigoenjava" src = "imágenes/codigoenjava.jpg"></center>
+
+   <h2>Clasificación de los lenguajes de alto nivel</h2>
+   <p>Tipos de lenguajes de programación de alto nivel según el punto de vista de trabajar los programas y la filosofía de sus creación:</p>
+   <p>Lenguaje  imperativo: entre ellos tenemos el Cobol, Pascal, C y Ada.</p>
+   <center><img class="imperativo" src = "imágenes/imperativo.jpg"></center>
+   <p>Lenguaje declarativo: el Lisp y el Prolog.</p>
+   <center><img class="declarativo" src = "imágenes/declarativo.jpg"></center>
+   <p>Lenguaje de programación orientado a objetos: el Smalltalk y el C++.</p>
+   <center><img class="objetos" src = "imágenes/objetos.jpg"></center>
+   <p>Lenguaje orientado al problema: son aquellos lenguajes específicos para gestión.</p>
+   <center><img class="problema" src = "imágenes/problema.jpg"></center>
+   <p>Lenguaje de programación natural: son los nuevos lenguajes que pretender aproximar el diseño y la construcción de programas al lenguaje de las personas.</p>
+   <center><img class="natural" src = "imágenes/natural.jpg"></center>
+   <h2>Ejemplos de lenguajes:</h2>
+   <p>a) Interpretados. Ruby es un lenguaje interpretado, así que podemos crear un archivo llamado hola.rb con el siguiente código, o cualquier código válido en Ruby (a esto se le conoce como el código fuente): puts "Hola Mundo"</p>
+   <p>Y ejecutarlo directamente ingresando el siguiente comando en la consola:</p>
+   <p>$ ruby hello.rb</p>
+   <center><img class="ruby" src = "imágenes/ruby.jpg"></center>
+   <p>b)	Compilados. Un lenguaje compilado tiene un paso adicional. Si tienes un compilador de C como gcc puedes crear un archivo llamado hello.c con el siguiente contenido, o cualquier código válido en C: </p>
+   <p>#include stdio.h</p>
+   <p></p><
+   <p>int main()</p>
+   <p>{</p>
+   <p>printf("Hola Mundo");</p>
+   <p>return 0;</p>
+   <p>}</p>
+   <p>Antes de ejecutarlo debes compilarlo con el siguiente comando:</p>
+   <p></p>
+   <p>$ gcc hello.c -o hello</p>
+   <p>Eso crea un archivo llamado hello (sin extensión) con el código de máquina (llamado el ejecutable) que puedes correr en la consola con el siguiente comando:</p>
+   <p></p>
+   <p>$ ./hello</p>
+   <p>Te debería aparecer la cadena de texto “Hola Mundo” debajo. Si necesitas cambiar el código fuente debes volverlo a compilar y ejecutarlo nuevamente.</p>
+   <center><img class="compilados" src = "imágenes/compilados.jpg"></center>
+   <p>c)	Orientados a objetos. Los principales lenguajes de programación orientada a objetos son: Ada, C++, C#, VB.NET, Clarion, Delphi, Eiffel, Java, Lexico (en castellano), Objective-C, Ocaml, Oz, PHP, PowerBuilder, Python, Ruby y Smalltalk.</p>
+   <center><img class="objetos2" src = "imágenes/objetos2.jpg"></center>
+   <p>d)	Funcionales. La programación funcional nos es más que un paradigma de programación, es decir, es una forma en la cual podemos resolver diferentes problemáticas.</p>
+   <p>Cuando nos encontramos desarrollamos software utilizando este paradigma, estaremos trabajando principalmente con funciones, evitaremos los datos mutables, así como el hecho de compartir estados entre funciones.</p>
+   <p>Veamos un ejemplo utilizando Java.</p>
+   <p></p>
+   <p>Java, cómo sabemos es un lenguaje orientado a objetos, sin embargo, en versiones recientes nosotros podemos hacer uso de la programación funcional.</p>
+   <p></p>
+   <p>En este ejemplo, la problemática es conocer la cantidad de elementos en la lista mayores a 10.</p>
+   <p></p>
+   <p>List Integer numeros = List.of(18, 6, 4, 15, 55, 78, 12, 9, 8);</p>
+   <p>Nosotros podemos resolver la problema utilizando ciclos y condicionales. Este sería el enfoque imperativo.</p>
+   <p></p>
+   <p>//Declarativo.</p>
+   <p>List Integer numeros = List.of(18, 6, 4, 15, 55, 78, 12, 9, 8);</p>
+   <p></p>
+   <p>int contador = 0;</p>
+   <p>for(int numero : numeros) {</p>
+   <p>if(numero > 10) {</p>
+   <p>contador ++;</p>
+   <p> }</p>
+   <p>}</p>
+   <p>System.out.println(contador);</p>
+   <p>El enfoque imperativo sería el siguiente.</p>
+   <p></p>
+   <p>//Imperativo</p>
+   <p>Long result = numeros.stream().filter(num -> num > 10).count();</p>
+   <p>System.out.println(result);</p>
+   <p>Cómo observamos, con el enfoque imperativo las líneas de código se reducen y nuestro código se torna más legible.</p>
+   <center><img class="imperativo" src = "imágenes/imperativo.jpg"></center>
+
+
+   <br><br><hr><br><br>
+   <center><p>Bibliografía</p></center>
+   <ul>
+     <li><a href="https://rockcontent.com/es/blog/que-es-un-lenguaje-de-programacion/" target = "_blank">https://rockcontent.com/es/blog/que-es-un-lenguaje-de-programacion/</a></li>
+     <li><a href="https://www.marketingandweb.es/marketing/lenguajes-de-programacion-mas-usados/" target = "_blank">https://www.marketingandweb.es/marketing/lenguajes-de-programacion-mas-usados/</a></li>
+     <li><a href="https://blog.makeitreal.camp/lenguajes-compilados-e-interpretados/" target = "_blank">https://blog.makeitreal.camp/lenguajes-compilados-e-interpretados/</a></li>
+     <li><a href="https://codigofacilito.com/articulos/programacion-funcional" target = "_blank">https://codigofacilito.com/articulos/programacion-funcional</a></li>
+   </ul>
+   <br><br><hr><br><br>
+
+   <a href="Tareas.html">Menú de Tareas</a>
+   <a href="Tarea3.html">Siguiente Tarea</a>
+   <a href="Tarea1.html">Tarea Anterior</a>
+ </body>
+</html>

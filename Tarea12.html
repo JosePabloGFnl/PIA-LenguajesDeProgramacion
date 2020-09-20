@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<link rel="stylesheet"type="text/css"href="CSS/estilosindex.css">
+ <head>
+<title>Tarea 12</title>
+<meta charset="utf-8">
+ </head>
+ <body>
+   <center><h1>Tarea 12: Serie C</h1></center>
+   <p></p>
+   <center><h2>Construya un programa en JAVA y RUBY. Que calcule e imprima la siguiente serie para los N primeros  términos: 2, ─ 3, ─ 5, ─ 7 , 4 , 6, ─ 9, ─ 11, ─ 13, 8, 10, 12, -15, -17, -19, 14</h2></center>
+   <br><br><hr><br><br>
+    <center><h3>Código de JAVA</h3></center>
+<p>    import javax.swing.JOptionPane;</p>
+<p>public class Tarea12 {</p>
+<p>    public static void main (String[] args){</p>
+<p> 		String entrada;</p>
+<p>		int a=1,b=2,d=-3,n,i=0,k;</p>
+<p>		entrada=JOptionPane.showInputDialog("Numeros de la serie: ");</p>
+<p>        n=Integer.parseInt(entrada);</p>
+<p>        do{</p>
+<p>            k=0;</p>
+<p>		while(k<<p>a&&i<<p>n){</p>
+<p>                    System.out.print(b+", ");</p>
+<p>                    b=b+2;</p>
+<p>                    k=k+1;</p>
+<p>                    i=i+1;</p>
+<p>    }</p>
+<p>    a=a+1;</p>
+<p>    if(i<<p>n){</p>
+<p>        for(int j=0;j<<p>3;j++){</p>
+<p>            System.out.print(d+", ");</p>
+<p>            d=d-2;</p>
+<p>            i=i+1;</p>
+<p>            if(i>=n){</p>
+<p>                break;</p>
+<p>                 }</p>
+<p>                  }</p>
+<p>                   }</p>
+<p>                    } while(i<<p>n);</p>
+<p>    }//Fin main</p>
+
+<p>}//Fin de la clase</p>
+
+<br><br><hr><br><br>
+<center><h3>Código de Ruby</h3></center>
+<p>print("Números de la serie: ")</p>
+<p>n= gets().to_i</p>
+<p>a=2</p>
+<p>b=1</p>
+<p>par=1</p>
+<p>c=-3</p>
+<p>cont_n=1</p>
+<p>cont_p=1</p>
+<p>for i in(0...n).step 1</p>
+<p>  if(cont_n>3) then</p>
+<p>    b=1</p>
+<p>    cont_n=1</p>
+<p>  end</p>
+<p>  if(cont_p>par) then</p>
+<p>    b=2</p>
+<p>    cont_p=1</p>
+<p>    par=par+1</p>
+<p>  end</p>
+<p>  if(b==1) then</p>
+<p>    print("#{a},")</p>
+<p>    a=a+2</p>
+<p>    cont_p = cont_p+1</p>
+<p>  else</p>
+<p>    print("#{c},")</p>
+<p>    c=c-2</p>
+<p>    cont_n=cont_n+1</p>
+<p>  end</p>
+<p>end</p>
+<br><br><hr><br><br>
+ <a href="Tareas.html">Menú de Tareas</a>
+ <a href="Tarea13.html">Siguiente Tarea</a>
+ <a href="Tarea11.html">Tarea Anterior</a>
+</body>
+</html>

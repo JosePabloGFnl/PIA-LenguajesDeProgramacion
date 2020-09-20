@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<link rel="stylesheet"type="text/css"href="CSS/estilosindex.css">
+ <head>
+<title>Tarea 11: Serie B</title>
+<meta charset="utf-8">
+ </head>
+ <body>
+   <center><h1>Tarea 11</h1></center>
+   <p></p>
+   <center><h2>Construya un programa en JAVA y RUBY. Que calcule e imprima la siguiente serie para los N primeros  términos:  -1 , 2 , 2, -3 , 4 , 4 , 4,  -5 , 6, 6, 6, 6, </h2></center>
+   <br><br><hr><br><br>
+    <center><h3>Código de JAVA</h3></center>
+    <p>import javax.swing.JOptionPane;</p>
+<p>public class Tarea11 {</p>
+<p>    public static void main (String[] args){</p>
+ <p>		String entrada, letrero="";</p>
+<p>		int a=1,n,pos=2,neg=-1,x=2,y;</p>
+<p>                int i=0;</p>
+<p>		entrada=JOptionPane.showInputDialog("Numeros para la serie: ");</p>
+<p>        n=Integer.parseInt(entrada);</p>
+
+<p>	do{</p>
+<p>            y=0;</p>
+<p>		while(y<<p>a&&i<</p>n){<p></p>
+<p>                    letrero=letrero+neg+",";</p>
+<p>                    neg=neg-2;</p>
+<p>                    y=y+1;</p>
+<p>                    i=i+1;</p>
+
+<p>    }</p>
+<p>    if(i<<p>n)</p><p>{</p>
+<p>        for(int j=0;j<<p>x;j++){</p>
+<p>            letrero=letrero+pos+",";</p>
+<p>            i=i+1;</p>
+<p>            if(i>=n){</p>
+<p>                break;</p>
+<p>                 }</p>
+<p>                  }</p>
+<p>                pos=pos+2;</p>
+<p>                 x=x+1;</p>
+<p>                   }</p>
+<p>                    } while(i<n);</p>
+<p>        JOptionPane.showMessageDialog(null, letrero);</p>
+<p>    }//Fin main</p>
+
+<p>}//Fin de la clase</p>
+<br><br><hr><br><br>
+<center><h3>Código de Ruby</h3></center>
+<p>print("Números para la serie:")</p>
+<p>n=gets().to_i</p>
+<p>v=2</p>
+<p>puts("")</p>
+<p>for i in(1..n).step 1</p>
+<p>  if(i%2==0) then</p>
+<p>    for f in (1...v).step 1</p>
+<p>      print("#{i},")</p>
+<p>    end</p>
+<p>    print("#{i}")</p>
+<p>    v = v + 1</p>
+<p>  else</p>
+<p>    print("#{i*-1}")</p>
+<p>  end</p>
+<p>  if(i==n)then</p>
+<p>    print(".")</p>
+<p>  else</p>
+<p>    print(",")</p>
+<p>  end</p>
+<p>end</p>
+<p>puts("")</p>
+
+  <br><br><hr><br><br>
+   <a href="Tareas.html">Menú de Tareas</a>
+   <a href="Tarea12.html">Siguiente Tarea</a>
+   <a href="Tarea10.html">Tarea Anterior</a>
+ </body>
+</html>

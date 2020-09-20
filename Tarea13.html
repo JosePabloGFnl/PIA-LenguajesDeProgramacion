@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<link rel="stylesheet"type="text/css"href="CSS/estilosindex.css">
+ <head>
+<title>Tarea 13</title>
+<meta charset="utf-8">
+ </head>
+ <body>
+   <center><h1>Tarea 13: Búsqueda en Vector</h1></center>
+   <p></p>
+   <center><h2>Elaborar un programa en JAVA y RUBY que realice una búsqueda de un número en un vector, mostrando solamente un mensaje indicando cuantas veces apareció el número. Además de imprimir el vector</h2></center>
+   <br><br><hr><br><br>
+    <center><h3>Código de JAVA</h3></center>
+<p>    import java.util.Scanner;</p>
+<p>import javax.swing.JOptionPane;</p>
+<p>public class Tarea13 {</p>
+<p>        public static void main (String[] args){</p>
+<p>        Scanner lec = new Scanner(System.in);</p>
+<p>        int N,I;</p>
+<p>        int []A;</p>
+<p>        int B,cont=0;</p>
+<p>        String entrada;</p>
+<p>        entrada = JOptionPane.showInputDialog("Ingrese el total de numeros: ");</p>
+<p>N = Integer.parseInt(entrada);</p>
+<p>A = new int[N];</p>
+<p>        for ( I=0; I<<p>N; I++){</p>
+<p>       entrada = JOptionPane.showInputDialog("A[" + (I+1) + "]= " );</p>
+<p>A[I] = Integer.parseInt(entrada);</p>
+<p>        }</p>
+<p>        JOptionPane.showInputDialog("Ingrese el número que desee buscar");</p>
+<p>            B = Integer.parseInt(entrada);</p>
+<p>        for(I=0;I<<p>N;I++){</p>
+<p>        if(B==A[I]){</p>
+<p>            cont++;</p>
+<p>        }</p>
+<p>        }</p>
+ <p>JOptionPane.showMessageDialog(null,"El número "+B+" se encontró "+cont+" veces.");</p>
+<p>       String letrero = "A = [ ";</p>
+<p>        for(I=0; I < <p>N; I++){</p>
+<p>letrero = letrero + A[I] + " ";</p>
+<p>        }</p>
+<p>        letrero = letrero + "]";</p>
+<p>JOptionPane.showMessageDialog(null, letrero);</p>
+
+<p>    }//Fin main</p>
+<p>}//Fin de la clase</p>
+
+<br><br><hr><br><br>
+<center><h3>Código de Ruby</h3></center>
+<p>print("Ingrese de cuantos números desea el vector")</p>
+<p>n= gets().to_i</p>
+<p>s= Array.new(n)</p>
+<p>co= 0</p>
+<p>for i in(0...n).step 1</p>
+<p>  print("Ingrese un valor")</p>
+<p>  s[i] = gets().to_i</p>
+<p>end</p>
+<p>letrero = "A["</p>
+<p>for i in(0...n).step 1</p>
+<p>  letrero=letrero+s[i].to_s+" "</p>
+<p>end</p>
+<p>letrero = letrero +"]"</p>
+<p>puts(letrero)</p>
+<p>print("número a buscar ")</p>
+<p>x=gets().to_i</p>
+<p>for i in(0...n).step 1</p>
+<p>  if(s[i]==x) then</p>
+<p>    co=co+1</p>
+<p>  end</p>
+<p>end</p>
+<p>print("El número seleccionado #{x} se repite #{co} veces.")</p>
+
+<br><br><hr><br><br>
+ <a href="Tareas.html">Menú de Tareas</a>
+ <a href="Tarea14.html">Siguiente Tarea</a>
+ <a href="Tarea12.html">Tarea Anterior</a>
+</body>
+</html>

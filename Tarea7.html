@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<link rel="stylesheet"type="text/css"href="CSS/estilostarea7.css">
+ <head>
+<title>Tarea 7</title>
+<meta charset="utf-8">
+ </head>
+ <body>
+   <center><h1>Tarea 7. R</h1></center>
+   <center><img class="r" src = "imágenes/r.jpg"></center>
+
+   <h2>Símbolos</h2>
+   <center><img class="simbolos" src = "imágenes/simbolos.jpg"></center>
+   <center><img class="prog" src = "imágenes/prog.jpg"></center>
+<p></p>
+   <p>Constantes: numéricas (3, 0.1, -2.18,…), de cadena de texto ("a", 'dos palabras',…), lógicas (TRUE y FALSE) y otras erspeciales (Inf, NA, NaN, NULL,…)</p>
+ <center><img class="numeros" src = "imágenes/numeros.jpg"></center>
+   <p>Operadores lógicos ( & , |, !, no confundir con otros lenguajes)</p>
+   <p>Operador de asignación (= o bien < ) </p>
+   <p>Comparaciones (==, !=, <, <=)</p>
+   <p>Clases de objetos:</p>
+   <p>Vectores: por ejemplo c(1, 5, 6), c('edad', 'altura', 'grado'), 1:10</p>
+   <p>Matrices: por ejemplo matrix(data=1:10, ncol=2, byrow=TRUE)</p>
+   <p>Hojas de datos: por ejemplo data.frame(numeros=1:3, letras=c('a', 'b', 'c'))</p>
+   <p>Listas: por ejemplo list(comp1=1:5, comp2=matrix(1:9, 3), comp3="una lista")</p>
+   <p>Ciclos for: la variable contador recorre cada componente del vector vector y realiza el cuerpo del bucle. La variable contador es un nombre uevo mientras que el vector vector debe estar ya definido.</p>
+   <p>Condicional if: se pone una expresión lógica (normalmente una comparación o una función cuyo resultado es TRUE o FALSE) de modo que si se evalúa como TRUE, entonces se procesa el bloque entre llaves, y se evalúa como FALSE, entonces se salta el bloque entre llaves. Opcionalmente se puede complementar con un else y otro bloque a procesar, cuando la evaluación de la condición es FALSE</p>
+   <p>Condicional while: se evalúa la condicionLogica y si resulta TRUE, entonces se procesa el cuerpo entre llaves, y se vuelve a evaluar la condicionLogica (indefinidamente hasta que resulte FALSE, en cuyo caso se salta el bloque entre llaves).</p>
+   <p></p>
+
+   <h2>Sintáxis</h2>
+   <center><img class="sintaxis" src = "imágenes/sintaxis.jpg"></center>
+   <p>La sintaxis en R es muy similar a la de otros lenguajes de programación como JAVA o C. Las normas básicas que definen la sintaxis de R son:</p>
+   <p>No se tienen en cuenta los espacios en blancos: podemos o no dejar espacios para que el código se puede ordenar de forma adecuada y poder entenderse.</p>
+   <p>Se distinguen las mayúsculas y minúsculas: para variables en el código, podemos crear diferentes variables con nombres iguales pero alternando mayúsculas y minúsculas.</p>
+   <p>Se pueden incluir comentarios: como vimos anteriormente los comentarios se utilizan para añadir información en el código.</p>
+   <p>No es necesario terminar cada sentencia con el carácter de punto y coma (;): en la mayoría de lenguajes de programación, es obligatorio terminar cada sentencia con este carácter. En en cambio R podemos o no terminar de esta forma.</p>
+   <p>Lenguaje orientado a objetos: todo en R son objetos, las variables, datos, funciones y resultados, que se generan en R son objetos estos se modifican o manipulan con operadores o funciones (que a su vez son objetos).</p>
+   <p></p>
+   <p>R se divide en cinco clases básicas o atómicas, estas son bloques de construcción o elementos que conforman a los objetos, son 5 clases principales: numérica o doble, entero, complejo, lógico y de carácter.</p>
+   <center><img class="sintaxisr" src = "imágenes/sintaxisr.jpg"></center>
+  <p></p>
+
+
+  <h2>Esqueleto de los programas</h2>
+     <center><img class="esqueletor" src = "imágenes/esqueletor.jpg"></center>
+   <p>rnorm(5) # 5 numeros aleatorios de una distribucion normal (mean= 0, sd = 1)</p>
+<p>## Hemos dicho que "#" indica el comienzo de un comentario?</p>
+<p></p>
+<p>## Los números se producen, y se muestran (print).</p>
+<p></p>
+<p> x  rnorm(5) # asignamos esos n´umeros a un objeto (un vector) llamado x.</p>
+<p>summary(x) ## mostrar un "summary" de x (un summary "inteligente").</p>
+<p></p>
+<p>## o también:</p>
+<p>w  summary(x)</p>
+<p>w</p>
+<p>print(w) # teclear w y print(y) producen el mismo resultado.</p>
+<p></p>
+<p>## summary(x) TAMBIEN es un objeto. (virtually) "everything is an object".</p>
+
+   <p></p>
+<h2>Aplicación a descargar para editar y ejecutar:</h2>
+   <p>RStudio</p>
+   <li><a href="https://rstudio.com/products/rstudio/download/" target = "_blank">Sitio web para la instalación de Leksah</a></li>
+   <center><img class="rstudio" src = "imágenes/rstudio.jpg"></center>
+   <p></p>
+<h2>A qué tipo de paradigma pertenece</h2>
+  <p>Funcional y orientado a objetos</p>
+<center><img class="funcional" src = "imágenes/funcional.jpg"></center>
+<center><img class="objetos" src = "imágenes/objetos.jpg"></center>
+ <p></p>
+<h2>Un ejemplo de un programa escrito en ese lenguaje</h2>
+   <p>Calcular la suma de los invesos de los 1000 primeros números naturalesCalcular la suma de los invesos de los 1000 primeros números naturales</p>
+   <p>suma = 0  # inicializa la suma a 0</p>
+   <p>for(i in 1:1000) {</p>
+   <p>suma = suma + 1/i # añade cada sumando</p>
+   <p>}</p>
+   <p>suma</p>
+   <p></p>
+
+
+   <br><br><hr><br><br>
+   <center><p>Bibliografía</p></center>
+   <ul>
+     <li><a href="http://www3.uji.es/~gregori/docencia/mt1021-1617/mt1021-1617-la-1-prog-tests.html" target = "_blank">http://www3.uji.es/~gregori/docencia/mt1021-1617/mt1021-1617-la-1-prog-tests.html</a></li>
+     <li><a href="http://rstadistica.blogspot.com/2015/11/sintaxis-de-r.html" target = "_blank">http://rstadistica.blogspot.com/2015/11/sintaxis-de-r.html</a></li>
+<li><a href="https://cran.r-project.org/doc/contrib/curso-R.Diaz-Uriarte.pdf" target = "_blank">https://cran.r-project.org/doc/contrib/curso-R.Diaz-Uriarte.pdf</a></li>
+<li><a href="http://www3.uji.es/~gregori/docencia/mt1021-1617/mt1021-1617-la-1-prog-tests.html" target = "_blank">http://www3.uji.es/~gregori/docencia/mt1021-1617/mt1021-1617-la-1-prog-tests.html</a></li>
+   </ul>
+   <br><br><hr><br><br>
+
+   <a href="Tareas.html">Menú de Tareas</a>
+   <a href="Tarea8.html">Siguiente Tarea</a>
+   <a href="Tarea6.html">Tarea Anterior</a>
+ </body>
+</html>

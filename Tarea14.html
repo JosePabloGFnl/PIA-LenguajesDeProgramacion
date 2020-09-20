@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<link rel="stylesheet"type="text/css"href="CSS/estilosindex.css">
+ <head>
+<title>Tarea 14</title>
+<meta charset="utf-8">
+ </head>
+ <body>
+   <center><h1>Tarea 14: Búsqueda en Matriz</h1></center>
+   <p></p>
+   <center><h2>Construya un programa en JAVA y RUBY que, al recibir como datos un arreglo bidimensional de NxM elementos de tipo entero y un número entero, determine cuántas veces se encuentra este número dentro del arreglo. Además, que imprima la matriz al final</h2></center>
+   <br><br><hr><br><br>
+    <center><h3>Código de JAVA</h3></center>
+<p>   import javax.swing.JOptionPane;</p>
+<p>public class Tarea14 {</p>
+<p>    public static void main (String[] args){</p>
+<p>int [][] matriz;</p>
+<p>		int i,j,fil, col, buscar, cont=0;</p>
+<p>		String entrada, letrero= " ";</p>
+
+<p>		entrada=JOptionPane.showInputDialog("Numero de filas: ");</p>
+<p>		fil =Integer.parseInt(entrada);</p>
+<p>		entrada=JOptionPane.showInputDialog("Numero de columnas: ");</p>
+<p>		col =Integer.parseInt(entrada);</p>
+
+<p>		matriz = new int[fil][col];		</p>
+
+<p>		for(i=0; i<<p>fil ; i++)</p>
+<p>		{</p>
+<p>			for(j=0; j<<p>col ; j++)</p>
+<p>			{</p>
+<p>				entrada = JOptionPane.showInputDialog(null,"Ingresa el valor de la matriz " + "[" + (i+1) + "][" + (j+1) + "] : " );</p>
+<p>				matriz[i][j]=Integer.parseInt(entrada);</p>
+<p>			}</p>
+<p>		}			</p>
+
+<p>		entrada=JOptionPane.showInputDialog("Ingresa el Numero a Buscar");</p>
+<p>		buscar = Integer.parseInt(entrada);	</p>
+
+<p>		for(i=0; i<<p>fil ; i++)</p>
+<p>		{</p>
+  <p>			for(j=0; j<<p>col ; j++)</p>
+<p>			{</p>
+<p>				if(matriz[i][j]== buscar)</p>
+<p>				{</p>
+<p>						cont++;</p>
+<p>				}</p>
+<p>			}</p>
+<p>		}</p>
+
+<p>		if(cont==1)</p>
+<p>		{</p>
+<p>			JOptionPane.showMessageDialog(null, "El numero que busco aparece  " + cont + "  vez en la matriz \n\n");</p>
+<p>		}</p>
+<p>		else if (cont > 1)</p>
+<p>		{</p>
+<p>			JOptionPane.showMessageDialog(null, "El numero que busco aparece  " + cont + "  veces en la matriz \n\n");</p>
+<p>		}</p>
+<p>		else</p>
+<p>		{</p>
+<p>			JOptionPane.showMessageDialog(null, "El numero que busco NO se encuentra en la matriz \n\n");</p>
+<p>		}</p>
+
+<p>		letrero = letrero + "Matriz: \n";</p>
+<p>		for(i=0;i < <p>fil ; i++){</p>
+<p>			for(j=0;j < <p>col ; j++){	</p>
+<p>					letrero = letrero + matriz[i][j] + " ";</p>
+<p>			}</p>
+<p>			letrero= letrero + "\n";</p>
+<p>		}		</p>
+
+<p>		JOptionPane.showMessageDialog(null,letrero);</p>
+
+<p>}</p>
+<p>}</p>
+
+<br><br><hr><br><br>
+<center><h3>Código de Ruby</h3></center>
+<p>cont=0;</p>
+<p>	letrero = "";</p>
+
+<p>	puts("Ingresa el  numero de filas: ")</p>
+<p>	fil = gets().to_i</p>
+
+<p>	puts("Ingresa el numero de columnas: ")</p>
+<p>	col = gets().to_i</p>
+
+<p>	matriz= Array.new(fil){Array.new(col)}</p>
+
+
+<p>		for i in (0..(fil-1)). step 1</p>
+<p>			for j in (0..(col-1)).step 1</p>
+<p>				puts("Ingresa el valor de la matriz [#{(i+1)}][ #{(j+1)}] :" )</p>
+<p>				matriz[i][j]= gets().to_i</p>
+<p>			end</p>
+<p>		end</p>
+
+<p>		puts("Ingresa el Numero a Buscar")</p>
+<p>		buscar = gets().to_i</p>
+
+<p>		for i in (0..(fil-1)). step 1</p>
+<p>			for j in (0..(col-1)).step 1</p>
+<p>				if(matriz[i][j]== buscar) then</p>
+<p>						cont = cont + 1</p>
+<p>				end</p>
+<p>			end</p>
+<p>		end</p>
+
+
+<p>		if(cont==1) then</p>
+<p>			puts("El numero que busco aparece  #{cont} vez en la matriz \n\n")</p>
+<p>		elsif (cont > 1) then</p>
+<p>			puts("El numero que busco aparece  #{cont}  veces en la matriz \n\n")</p>
+<p>		else</p>
+<p>			puts("El numero que busco NO se encuentra en la matriz \n\n")</p>
+<p>		end</p>
+
+<p>		puts("La matriz es: ")</p>
+
+<p>		for i in (0..(fil-1)).step 1</p>
+<p>			for j in (0..(col-1)).step 1</p>
+<p>					letrero = letrero + matriz[i][j].to_s + " "</p>
+<p>			end</p>
+<p>			letrero = letrero + "\n"</p>
+<p>		end</p>
+
+<p>		puts(letrero)</p>
+<br><br><hr><br><br>
+ <a href="Tareas.html">Menú de Tareas</a>
+ <a href="Tarea15.html">Siguiente Tarea</a>
+ <a href="Tarea13.html">Tarea Anterior</a>
+</body>
+</html>

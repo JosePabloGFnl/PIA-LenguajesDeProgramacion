@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<link rel="stylesheet"type="text/css"href="CSS/estilosindex.css">
+ <head>
+<title>Tarea 8</title>
+<meta charset="utf-8">
+ </head>
+ <body>
+   <center><h1>Tarea 8: Conversión de Temperatura</h1></center>
+   <p></p>
+   <center><h2>Elabore un programa en JAVA Y RUBY que mediante un Menú de opciones permita calcular la conversión de escala de temperatura: 1. De grados Centígrados a grados Farenheit 2. De grados Farenheita grados Centígrados</h2></center>
+      <br><br><hr><br><br>
+      <center><h3>Código de JAVA</h3></center>
+      <p>import java.util.Scanner;</p>
+<p>import javax.swing.JOptionPane;</p>
+<p>public class Tarea8 {</p>
+  <p>  public static void main (String[] args){</p>
+    <p>    Scanner lec = new Scanner(System.in);</p>
+      <p>  int op;</p>
+
+        <p>double res,x;</p>
+      <p>  String entrada;</p>
+      <p> // JCheckBox check = new JCheckBox("Convertir");</p>
+        <p>Object[] options={"°C -> °F ","°F -> °C"};</p>
+       <p>int v = JOptionPane.showOptionDialog(null,</p>
+          <p>     "Ingresa la conversión que desee",</p>
+            <p>   "", </p>
+               <p>JOptionPane.YES_NO_CANCEL_OPTION,</p>
+               <p>JOptionPane.QUESTION_MESSAGE,</p>
+               <p>null,</p>
+               <p>options[0]);</p>
+               <p>options,</p>
+
+       <p>switch(v) {</p>
+          <p> case 0:</p>
+            <p>       entrada = JOptionPane.showInputDialog("Ingrese el número que desee convertir");</p>
+        <p>x = Double.parseDouble(entrada);</p>
+        <p>res=((x*2-x/5) + 32);</p>
+        <p>JOptionPane.showMessageDialog(null, res+" grados Farenheit");</p>
+        <p>break;</p>
+           <p>case 1:</p>
+              <p>   entrada = JOptionPane.showInputDialog("Ingrese el número que desee convertir");</p>
+        <p>x = Double.parseDouble(entrada);</p>
+        <p>res=((x - 32) * 5 / 9);</p>
+        <p>JOptionPane.showMessageDialog(null, res+" grados Celsius");</p>
+       <p>break;</p>
+       <p>}</p>
+
+
+
+    <p>}//Fin main</p>
+
+<p>}//Fin de la clase</p>
+   <br><br><hr><br><br>
+      <center><h3>Código de Ruby</h3></center>
+     <p>puts("1.°C -> °F")</p>
+      <p>puts("2.°F -> °C")</p>
+      <p>x = gets().to_i</p>
+      <p>puts("Ingrese el número que deseé convertir")</p>
+      <p>n = gets().to_f</p>
+      <p>case x</p>
+      <p>when 1</p>
+      <p>puts("#{(n*2-x/5)+32.0} grados Farenheit")</p>
+      <p>when 2</p>
+      <p>puts("#{(n-32.0)/1.8} grados Celcius")</p>
+      <p>end</p>
+   <br><br><hr><br><br>
+   <a href="Tareas.html">Menú de Tareas</a>
+   <a href="Tarea9.html">Siguiente Tarea</a>
+   <a href="Tarea7.html">Tarea Anterior</a>
+ </body>
+</html>

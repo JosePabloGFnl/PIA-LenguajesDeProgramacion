@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<link rel="stylesheet"type="text/css"href="CSS/estilostarea3.css">
+ <head>
+<title>Tarea 3</title>
+<meta charset="utf-8">
+ </head>
+ <body>
+   <center><h1>Tarea 3. Prolog</h1></center>
+   <center><img class="prolog2" src = "imágenes/prolog2.jpg"></center>
+
+   <h2>Símbolos</h2>
+   <center><img class="simbolos" src = "imágenes/simbolos.jpg"></center>
+   <p>Los átomos pueden construirse de 3 formas:</p>
+   <p>Cadenas de letras, dígitos y el caracter '_', empezando con una letra minúscula</p>
+   <p>ana</p>
+   <p>pedro</p>
+   <p>x25</p>
+   <p>x_25</p>
+   <p>procedmiento_uno</p>
+   <p>categoria_x</p>
+   <p>Cadenas de caracteres especiales</p>
+   <p><---></p>
+   <p>=====></p>
+   <p>....</p>
+   <p>Cadenas de caracteres encerradas en apóstrofes. Esto se utiliza cuando se quiere, por ejemplo, tener un átomo que empiece con una letra mayúscula.</p>
+   <p>'Tom'</p>
+   <p>'Polo_Norte'</p>
+   <p>Nota: en algunos compiladores, en vez de utilizar apóstrofes se utilizan comillas " " como en el caso de Prolog.</p>
+   <p></p>
+   <p>NÚMEROS</p>
+    <center><img class="numeros" src = "imágenes/numeros.jpg"></center>
+   <p>Los números usados en Prolog incluyen números enteros y números reales. La sintaxis de los enteros es simple:</p>
+   <p>1</p>
+   <p>1313</p>
+   <p>O</p>
+   <p>El tratamiento de números reales depende de la implementación de Prolog. Asumiendo una sintaxis simple:</p>
+   <p>3.14</p>
+   <p>-0.0035</p>
+   <p>100.2</p>
+   <p></p>
+   <p>ARITMÉTICOS.</p>
+   <center><img class="aritmeticos" src = "imágenes/aritmeticos.jpg"></center>
+   <p>Todas las versiones de Prolog soportan los siguientes operadores aritméticos, listados en el orden de prioridad de ejecución.</p>
+   <p>+ --> SUMA</p>
+   <p>- --> RESTA</p>
+   <p>* --> MULTIPLICACIÓN</p>
+   <p>/ --> DIVISIÓN</p>
+   <p>// --> DIVISION ENTERA</p>
+   <p>MOD --> RESIDUO</p>
+   <p>^ --> POTENCIA</p>
+   <p>Sqrt(X) --> Calcula la raíz cuadrada de la variable</p>
+   <p>log(X) --> Calcula el logaritmo de X</p>
+   <p>ln(X) --> Calcula el logaritmo natural de X</p>
+   <p>abs(B) --> Regresa el valor absoluto de B</p>
+   <p>sin(T) --> Seno de T</p>
+   <p>cos(A) --> Coseno de A</p>
+   <p>tan(C) --> Tangente de C</p>
+   <p></p>
+   <p>RELACIONALES</p>
+   <center><img class="relacionales" src = "imágenes/relacionales.jpg"></center>
+   <p>Prolog soporta los siguientes operadores relacionales:</p>
+   <p></p>
+   <p>= --> IGUAL QUE</p>
+   <p>> --> MAYOR QUE</p>
+   <p>>= --> MAYOR O IGUAL QUE</p>
+   <p>>= --> MENOR O IGUAL QUE</p>
+   <p><> --> DESIGUAL QUE</p>
+   <p>=/= --> DIFERENTE QUE</p>
+   <p>is --> EVALUADOR DE EXPRESIÓN</p>
+   <p>seed --> GENERADOR DE NÚMEROS ALEATORIOS</p>
+   <h2>Sintáxis</h2>
+   <center><img class="sintaxis" src = "imágenes/sintaxis.jpg"></center>
+   <p>Conjunto de caracteres válidos (máx. 128; ASCII 7 bits):</p>
+<ul>
+  <li>Mayúsculas [A-Z]</li>
+  <li>Minúsculas [a-z]</li>
+  <li>Dígitos [0-9]</li>
+  <li>Caracteres especiales: + - * / ^ < > ~ : ; . _ ? \ ( ) [ ]</li>
+  <li>Se distinguen imprimibles de no imprimibles</li>
+  </ul>
+   <p>Un programa PROLOG es una sucesión de términos:</p>
+<ul>
+  <li>Constantes</li>
+  <li>Variables</li>
+  <li>Estructuras(functores)</li>
+  </ul>
+  <h2>Esqueleto de los programas</h2>
+  <center><img class="esqueletoprolog" src = "imágenes/esqueletoprolog.jpg"></center>
+   <p>Un programa en prolog está compuesto por cláusulas. Las cláusulas son la base del programa,
+están conformadas por hechos y reglas . El conjunto de hechos y reglas forman el
+conocimiento base del programa, mediante el cual podremos realizar consultas e inferir datos.</p>
+   <p>Hechos: Un hecho, en PROLOG, es una relación entre objetos. Para nosotros es una
+afirmación directa entre uno o varios objetos, donde debemos tomar en cuenta la siguiente
+formato:</p>
+   <p></p>
+   <p>Predicado(sujeto(‘,’||sujeto)*)</p>
+   <p></p>
+   <p>Ejemplos:</p>
+   <p>le_gusta_a(juan,maria).</p>
+   <p>valioso(oro).</p>
+   <p>tiene(juan,libro).</p>
+   <p>da(juan,libro,maria).</p>
+   <p></p>
+   <p>Reglas: Una regla, en PROLOG, es una sentencia condicional.Es decir sin un objeto cumple
+cierta característica, se obliga a que tenga otra relación y debemos tener en cuenta el siguiente
+formato:</p>
+   <p></p>
+   <p>Conclusión condicional Parte Condicional</p>
+   <p>condicional : “:-”</p>
+   <p>Ejemplo:</p>
+   <p></p>
+   <p>Como una primer aproximación al lenguaje vamos a realizar el siguiente ejemplo sencillo y
+básico.</p>
+ <center><img class="lenguajeprolog" src = "imágenes/lenguajeprolog.jpg"></center>
+<h2>Aplicación a descargar para editar y ejecutar:</h2>
+   <p>Program Development Tools</p>
+   <center><img class="pdt" src = "imágenes/pdt.jpg"></center>
+<h2>A qué tipo de paradigma pertenece</h2>
+  <p>Prolog se enmarca en el paradigma de los lenguajes lógicos y declarativos, lo que lo diferencia enormemente de otros lenguajes más populares tales como Fortran, Pascal, C o Java.</p>
+<center><img class="logicos" src = "imágenes/logicos.jpg"></center>
+<h2>Un ejemplo de un programa escrito en ese lenguaje</h2>
+   <p>animal(conejo)</p>
+   <p>animal(perro)</p>
+   <p>carnivoro(perro)</p>
+   <p>masDebil(conejo, perro)</p>
+   <p></p>
+   <p>herbivoro(conejo).</p>
+   <p>plantaComestible(lechuga).</p>
+   <p></p>
+   <p>come(A,B) :-</p>
+   <p>carnivoro(A), animal(B), masDebil(B, A);</p>
+   <p>herbivoro(A), plantaComestible(B).</p>
+
+
+
+
+
+
+   <br><br><hr><br><br>
+   <center><p>Bibliografía</p></center>
+   <ul>
+     <li><a href="https://www.infor.uva.es/~calonso/IAI/PracticasProlog/Tema2/Tema%202.%20La%20Sintaxis.pdf" target = "_blank">https://www.infor.uva.es/~calonso/IAI/PracticasProlog/Tema2/Tema%202.%20La%20Sintaxis.pdf</a></li>
+     <li><a href="http://ferestrepoca.github.io/paradigmas-de-programacion/proglogica/tutoriales/prolog-gh-pages/TutorialProlog2017I.pdf" target = "_blank">http://ferestrepoca.github.io/paradigmas-de-programacion/proglogica/tutoriales/prolog-gh-pages/TutorialProlog2017I.pdf</a></li>
+     <li><a href="https://www.swi-prolog.org/IDE.html" target = "_blank">https://www.swi-prolog.org/IDE.html</a></li>
+     <li><a href="https://swish.swi-prolog.org/p/Tutorial%20de%20prolog.swinb" target = "_blank">https://swish.swi-prolog.org/p/Tutorial%20de%20prolog.swinb</a></li>
+   </ul>
+   <br><br><hr><br><br>
+
+   <a href="Tareas.html">Menú de Tareas</a>
+   <a href="Tarea4.html">Siguiente Tarea</a>
+   <a href="Tarea2.html">Tarea Anterior</a>
+ </body>
+</html>

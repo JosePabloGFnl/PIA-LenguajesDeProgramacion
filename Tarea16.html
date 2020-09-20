@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<link rel="stylesheet"type="text/css"href="CSS/estilosindex.css">
+ <head>
+<title>Tarea 16</title>
+<meta charset="utf-8">
+ </head>
+ <body>
+   <center><h1>Tarea 16: Multiplicación de matrices </h1></center>
+   <p></p>
+   <center><h2>Elaborar un programa en JAVA y RUBY que calcule la multiplicación de dos matrices que ingrese el usuario. (nota: Validar lo que sea necesario para poder realizar la multiplicación de matrices)</h2></center>
+   <br><br><hr><br><br>
+    <center><h3>Código de JAVA</h3></center>
+
+    <p>  import javax.swing.JOptionPane;</p>
+<p>public class Tarea16{</p>
+<p>	public static void main (String[]args){</p>
+
+<p>		int [][] matriz1;</p>
+<p>		int [][] matriz2;</p>
+<p>		int [][] multiplicacion;</p>
+<p>		int i,j,fil1, col1, fil2, col2;</p>
+<p>		int suma = 0;</p>
+<p>		String entrada, letrero= "";</p>
+
+<p>		do</p>
+<p>		{</p>
+<p>			entrada=JOptionPane.showInputDialog("Numero de filas de la primera matriz: ");</p>
+<p>			fil1 =Integer.parseInt(entrada);</p>
+<p>			entrada=JOptionPane.showInputDialog("Numero de columnas de la primera matriz: ");</p>
+<p>			col1 =Integer.parseInt(entrada);</p>
+
+<p>			matriz1 = new int[fil1][col1];	</p>
+
+<p>			entrada=JOptionPane.showInputDialog("Numero de filas de la segunda matriz: ");</p>
+<p>			fil2 =Integer.parseInt(entrada);</p>
+<p>			entrada=JOptionPane.showInputDialog("Numero de columnas de la segunda matriz: ");</p>
+<p>			col2 =Integer.parseInt(entrada);</p>
+
+<p>			matriz2 = new int[fil2][col2];	</p>
+
+<p>		}</p>
+<p>		while( fil1 != fil2 || col1 != col2);</p>
+
+
+
+<p>		for(i=0; i<<p>fil1 ; i++)</p>
+<p>		{</p>
+<p>			for(j=0; j<<p>col1 ; j++)</p>
+<p>			{</p>
+<p>				entrada = JOptionPane.showInputDialog(null,"Ingresa el valor de la primera matriz " + "[" + (i+1) + "][" + (j+1) + "] : " );</p>
+<p>				matriz1[i][j]=Integer.parseInt(entrada);</p>
+<p>			}</p>
+<p>		}	</p>
+
+<p>		for(i=0; i<<p>fil2 ; i++)</p>
+<p>		{</p>
+<p>			for(j=0; j<<p>col2 ; j++)</p>
+<p>			{</p>
+<p>				entrada = JOptionPane.showInputDialog(null,"Ingresa el valor de la segunda matriz " + "[" + (i+1) + "][" + (j+1) + "] : " );</p>
+<p>				matriz2[i][j]=Integer.parseInt(entrada);</p>
+<p>			}</p>
+<p>		}			</p>
+
+<p>		multiplicacion = new int[fil1][col1];</p>
+<p>		JOptionPane.showMessageDialog(null, "Matriz A * B es: \n");</p>
+
+<p>		for(i = 0; i < <p>fil1; i++){</p>
+<p>			for(j = 0; j < <p>col1; j++){</p>
+<p>				suma = 0;</p>
+<p>				for(int k = 0; k < <p>col1; k++){</p>
+<p>					suma += matriz1[i][k] * matriz2[k][j];</p>
+<p>				}</p>
+<p>				multiplicacion[i][j] = suma;</p>
+<p>				letrero = letrero + multiplicacion[i][j] + " ";</p>
+<p>			}</p>
+<p>		letrero = letrero + "\n";</p>
+<p>		}</p>
+
+<p>		JOptionPane.showMessageDialog(null,letrero);</p>
+
+<p>	} // Fin de metodo main</p>
+<p>}// Fin de clase</p>
+<br><br><hr><br><br>
+<center><h3>Código de Ruby</h3></center>
+<p>suma = 0</p>
+
+<p>  begin</p>
+
+<p>    puts("Numero de filas de la primera matriz: ")</p>
+<p>    fil1 = gets().to_i</p>
+
+<p>    puts("Numero de columnas de la primera matriz: ")</p>
+<p>    col1 = gets().to_i</p>
+
+<p>    matriz1 = Array.new(fil1){Array.new(col1)}</p>
+
+
+<p>    puts("Numero de filas de la segunda matriz: ")</p>
+<p>    fil2 = gets().to_i</p>
+
+<p>    puts("Numero de columnas de la segunda matriz: ")</p>
+<p>    col2 = gets().to_i</p>
+
+<p>    matriz2 = Array.new(fil2){Array.new(col2)}</p>
+
+<p>  end while(fil1 != fil2 || col1 != col2)</p>
+
+
+<p>  for i in (0..(fil1-1)). step 1</p>
+<p>    for j in (0..(col1-1)).step 1</p>
+<p>      puts("Ingresa el valor de la primera matriz [#{(i+1)}][ #{(j+1)}] :" )</p>
+<p>      matriz1[i][j]= gets().to_i</p>
+<p>    end</p>
+<p>  end</p>
+
+<p>  for i in (0..(fil2-1)). step 1</p>
+<p>    for j in (0..(col2-1)).step 1</p>
+<p>      puts("Ingresa el valor de la segunda matriz [#{(i+1)}][ #{(j+1)}] :" )</p>
+<p>      matriz2[i][j]= gets().to_i</p>
+<p>    end</p>
+<p>  end</p>
+
+<p>  letrero= ""</p>
+<p>  multiplicacion = Array.new(fil1){Array.new(col1)}</p>
+
+<p>  puts("Matriz A * B es: \n")</p>
+
+<p>  for i in (0..(fil1-1)).step 1</p>
+<p>    for j in (0..(col1-1)).step 1</p>
+<p>      suma = 0</p>
+<p>      for k in (0..(col1-1)). step 1</p>
+<p>        suma += matriz1[i][k] * matriz2[k][j]</p>
+<p>      end</p>
+<p>      multiplicacion[i][j] = suma</p>
+<p>      letrero = letrero + multiplicacion[i][j].to_s + " "</p>
+<p>    end</p>
+<p>    letrero= letrero + "\n"</p>
+<p>  end</p>
+
+<p>  puts(letrero)</p>
+  <br><br><hr><br><br>
+   <a href="Tareas.html">Menú de Tareas</a>
+   <a href="Tarea15.html">Tarea Anterior</a>
+  </body>
+  </html>

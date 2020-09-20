@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<link rel="stylesheet"type="text/css"href="CSS/estilostarea6.css">
+ <head>
+<title>Tarea 6</title>
+<meta charset="utf-8">
+ </head>
+ <body>
+   <center><h1>Tarea 6. Haskell</h1></center>
+   <center><img class="haskell" src = "imágenes/haskell.jpg"></center>
+   <center><img class="haskell2" src = "imágenes/haskell2.jpg"></center>
+
+   <h2>Símbolos</h2>
+   <center><img class="simbolos" src = "imágenes/simbolos.jpg"></center>
+   <center><img class="prog" src = "imágenes/prog.jpg"></center>
+<p></p>
+   <p>Puesto que Haskell es un lenguaje funcional puro, todos los cómputos vienen descritos a través de la evaluación de expresiones (términos sintácticos) para producir valores (entidades abstractas que son vistas como respuestas). Todo valor tiene asociado un tipo. (Intuitivamente, podemos pensar que los tipos son conjuntos de valores.) Ejemplos de expresiones son los valores atómicos tales como el entero 5, o el carácter 'a', o la función \x -> x+1, y los valores estructurados como la lista [1,2,3] y el par ('b',4).</p>
+   <p></p>
+   <p>Ya que las expresiones denotan valores, las expresiones de tipo son términos sintácticos que denotan tipos. Ejemplos de expresiones de tipo son los tipos atómicos Integer (enteros con precisión ilimitada), Char (caracteres), Integer->Integer (funciones que aplican Integer sobre Integer), así como los tipos estructurados [Integer] (lista homogénea de enteros) y (Char,Integer) (par formado por un carácter y un entero).</p>
+   <p></p>
+   <p>Todos los valores de Haskell son de primera categoría ("first-class") ---pueden ser argumentos o resultados de funciones, o pueden ser ubicados en estructuras de datos, etc. Por otro lado, los tipos de Haskell no son de primera categoría. En cierto sentido, los tipos describen valores, y la asociación de un valor con su tipo se llama un tipificado (typing). Usando los ejemplos anteriores, podemos escribir "tipificaciones" como los siguientes:</p>
+   <p></p>
+   <p>                          5  :: Integer</p>
+   <p>                         'a' :: Char</p>
+   <p>                         inc :: Integer -> Integer</p>
+   <p>                     [1,2,3] :: [Integer]</p>
+   <p>                     ('b',4) :: (Char,Integer)</p>
+   <p></p>
+   <p>El símbolo "::" puede leerse "tiene el tipo".</p>
+   <p></p>
+   <p>Haskell proporciona tipos polimóficos ---tipos que son cuantificados universalmente sobre todos los tipos. Tales tipos describen esencialmente familias de tipos. Por ejemplo, (para_todo a)[a] es la familia de las listas de tipo base a, para cualquier tipo a. Las listas de enteros (e.g. [1,2,3]), de caracteres (['a','b','c']), e incluso las listas de listas de interos, etc., son miembros de esta familia. (Nótese que [2,'b'] no es un ejemplo válido, puesto que no existe un tipo que contenga tanto a 2 como a 'b'.)</p>
+   <center><img class="poli" src = "imágenes/poli.jpg"></center>
+   <p>Como ejemplo de función definida por el usuario y que opera sobre listas, consideremos el problema de contar el número de elementos de una lista:</p>
+   <p></p>
+   <p>length                  :: [a] -> Integer</p>
+   <p>length []               =  0</p>
+   <p>length (x:xs)           =  1 + length xs</p>
+   <p></p>
+
+   <h2>Sintáxis</h2>
+   <center><img class="sintaxis" src = "imágenes/sintaxis.jpg"></center>
+   <p>secsToWeeks secs = let perMinute = 60</p>
+   <p>                       perHour   = 60 * perMinute</p>
+   <p>                       perDay    = 24 * perHour</p>
+   <p>                       perWeek   =  7 * perDay</p>
+   <p>                   in  secs / perWeek</p>
+   <p>La expresión let define nombres temporales. (Esto es usando layout otra vez. Se puede usar {llaves}, y separar los nombres con punto y comas, si se prefiere).</p>
+   <p></p>
+   <p>classify age = case age of 0 -> "newborn"</p>
+   <p>                           1 -> "infant"</p>
+   <p>                           2 -> "toddler"</p>
+   <p>                           _ -> "senior citizen"</p>
+   <p>La expresión case produce ramas de decisión. La etiqueta especial _ significa "cualquier otra cosa".</p>
+  <p></p>
+
+
+  <h2>Esqueleto de los programas</h2>
+     <center><img class="esqueletohaskell" src = "imágenes/esqueletohaskell.jpg"></center>
+   <p>Las Acciones I/O se pueden usar para leer y escribir en la consola. Algunas son:</p>
+<p></p>
+<p>Prelude> putStrLn "Hello, Haskell"</p>
+<p>Hello, Haskell</p>
+<p>Prelude> putStr "No newline"</p>
+<p>No newline</p>
+<p>Prelude> print (5 + 4)</p>
+<p>9</p>
+<p>Prelude> print (1 mayor 2)</p>
+<p>True</p>
+<p>Las funciones putStr y putStrLn imprimen cadenas en la terminal. La función print imprime cualquier tipo de valor. (Si se hace print de una cadena, tendrá comillas).</p>
+<p></p>
+<p>Si necesita múltiples acciones I/O en una expresión, puede usar un bloque do. Las acciones se separan con punto y coma.</p>
+<p></p>
+<p>Prelude> do { putStr "2 + 2 = " ; print (2 + 2) }</p>
+<p>2 + 2 = 4</p>
+<p>Prelude> do { putStrLn "ABCDE" ; putStrLn "12345" }</p>
+<p>ABCDE</p>
+<p>12345</p>
+<p></p>
+<p>La lectura se puede hacer con haske getLine /hask (que retorna una cadena String) o readLn (que retorna un valor de cualquier tipo que se desee). El símbolo (flecha) se usa para asignar un nombre al resultado de la acción I/O.</p>
+<p></p>
+<p>Existe otra forma de escribir los bloques do. Si se suprimen las llaves y los punto y coma, la indentación se vuelve importante. Esto no funciona muy bien en ghci, pero intente poniéndolo en un fichero (por ejemplo, Test.hs) y compilelo.</p>
+<p></p>
+<p>main = do putStrLn "What is 2 + 2?"</p>
+<p>        x (flecha) readLn</p>
+<p>      if x == 4</p>
+<p>      then putStrLn "You're right!"</p>
+<p>      else putStrLn "You're wrong!"</p>
+
+   <p></p>
+<h2>Aplicación a descargar para editar y ejecutar:</h2>
+   <p>Leksah</p>
+   <li><a href="http://leksah.org/" target = "_blank">Sitio web para la instalación de Leksah</a></li>
+   <center><img class="leksah" src = "imágenes/leksah.jpg"></center>
+   <p></p>
+<h2>A qué tipo de paradigma pertenece</h2>
+  <p>Funcional, no estricto, modular, fuertemente tipificado</p>
+<center><img class="funcional" src = "imágenes/funcional.jpg"></center>
+ <p></p>
+<h2>Un ejemplo de un programa escrito en ese lenguaje</h2>
+   <p>-- Función que retorna el sucesor de un entero</p>
+   <p>sucesor :: Int -> Int</p>
+   <p>sucesor x = x + 1</p>
+   <p></p>
+   <p>reverso [] = []</p>
+   <p>reverso (x:resto) = concatenar (reverso resto) [x]</p>
+   <p></p>
+<center><img class="programahaskell" src = "imágenes/programahaskell.jpg"></center>
+   <p></p>
+
+
+   <br><br><hr><br><br>
+   <center><p>Bibliografía</p></center>
+   <ul>
+     <li><a href="http://www.lcc.uma.es/~blas/pfHaskell/gentle/goodies.html" target = "_blank">http://www.lcc.uma.es/~blas/pfHaskell/gentle/goodies.html</a></li>
+     <li><a href="https://wiki.haskell.org/Aprende_Haskell_en_10_minutos" target = "_blank">https://wiki.haskell.org/Aprende_Haskell_en_10_minutos</a></li>
+   </ul>
+   <br><br><hr><br><br>
+
+   <a href="Tareas.html">Menú de Tareas</a>
+   <a href="Tarea7.html">Siguiente Tarea</a>
+   <a href="Tarea5.html">Tarea Anterior</a>
+ </body>
+</html>

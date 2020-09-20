@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<link rel="stylesheet"type="text/css"href="CSS/estilosindex.css">
+ <head>
+<title>Tarea 10</title>
+<meta charset="utf-8">
+ </head>
+ <body>
+   <center><h1>Tarea 10: Serie A</h1></center>
+   <p></p>
+   <center><h2>Construya un programa en JAVA Y RUBY. Que calcule e imprima la siguiente serie para los N primeros  términos: 1 , 8 , 243 , 16384 , 195312</h2></center>
+   <br><br><hr><br><br>
+    <center><h3>Código de JAVA</h3></center>
+    <p>import java.util.Scanner;</p>
+    <p>public class Tarea10 {</p>
+    <p>    public static void main (String[] args){</p>
+    <p>               Scanner lec = new Scanner(System.in);</p>
+    <p>        int N;</p>
+    <p>         System.out.print("Ingresa el numero entero: ");</p>
+    <p>        N = lec.nextInt();</p>
+    <p>        for (int I=1; I<=N; I++){</p>
+    <p>          System.out.println(Math.pow(I,((2*I)-1)));</p>
+    <p>        }</p>
+
+    <p>    }//Fin main</p>
+
+  <p>  }//Fin de la clase</p>
+<br><br><hr><br><br>
+<center><h3>Código de Ruby</h3></center>
+<p>print("Ingresa el total de elementos del vector: ")</p>
+<p>n = gets().to_i</p>
+<p>puts()</p>
+<p>puts()</p>
+<p>print("A=[")</p>
+<p>for i in (1..n).step 1</p>
+<p>  res=i**((2*i)-1)</p>
+<p>print("#{res},")</p>
+<p>end</p>
+<p>puts("]")</p>
+
+    <br><br><hr><br><br>
+     <a href="Tareas.html">Menú de Tareas</a>
+     <a href="Tarea11.html">Siguiente Tarea</a>
+     <a href="Tarea9.html">Tarea Anterior</a>
+   </body>
+  </html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<link rel="stylesheet"type="text/css"href="CSS/estilosindex.css">
+ <head>
+<title>Tarea 9</title>
+<meta charset="utf-8">
+ </head>
+ <body>
+   <center><h1>Tarea 9: Conversión de monedas</h1></center>
+   <p></p>
+   <center><h2>Elabore un programa en JAVA Y RUBY que a través de un Menú de opciones permita al usuario convertir de pesos a las siguientes monedas:  1. Dólar  2. Euro  3. Yen(Japonés)  4. Dólar de Hong Kon</h2></center>
+   <br><br><hr><br><br>
+       <center><h3>Código de JAVA</h3></center>
+       <p>import java.util.Scanner;</p>
+       <p>import javax.swing.JOptionPane;</p>
+       <p>public class Tarea9 {</p>
+           <p>public static void main (String[] args){</p>
+               <p>Scanner lec = new Scanner(System.in);</p>
+               <p>int op;</p>
+               <p>float x;</p>
+               <p>double res;</p>
+               <p>String entrada;</p>
+               <p>Object[] options={"Dolar","Euro","Yen","Dolar Hong Kong"};</p>
+              <p>int v = JOptionPane.showOptionDialog(null,</p>
+              <p>        "Ingresa la conversión que desee",</p>
+              <p>        "", </p>
+              <p>        JOptionPane.YES_NO_CANCEL_OPTION,</p>
+              <p>        JOptionPane.QUESTION_MESSAGE,</p>
+              <p>        null,</p>
+              <p>        options,</p>
+              <p>        options[0]);</p>
+
+            <p>   switch (v) {</p>
+            <p>       case 0:</p>
+            <p>           entrada = JOptionPane.showInputDialog("Ingrese la cantidad de pesos que desee convertir");</p>
+            <p>           x = Integer.parseInt(entrada);</p>
+            <p>           res=(x*0.042);</p>
+            <p>           JOptionPane.showMessageDialog(null, res+" dólares");</p>
+            <p>           break;</p>
+            <p>       case 1:</p>
+            <p>           entrada = JOptionPane.showInputDialog("Ingrese el número que desee convertir");</p>
+              <p>         x = Integer.parseInt(entrada);</p>
+              <p>         res=(x*0.039);</p>
+              <p>         JOptionPane.showMessageDialog(null, res+" euros");</p>
+              <p>         break;</p>
+              <p>     case 2:</p>
+              <p>          entrada = JOptionPane.showInputDialog("Ingrese el número que desee convertir");</p>
+              <p>         x = Integer.parseInt(entrada);</p>
+              <p>         res=(x*4.47);</p>
+              <p>         JOptionPane.showMessageDialog(null, res+" yen");</p>
+              <p>         break;</p>
+              <p>     case 3:</p>
+              <p>          entrada = JOptionPane.showInputDialog("Ingrese el número que desee convertir");</p>
+              <p>         x = Integer.parseInt(entrada);</p>
+              <p>         res=(x*0.32);</p>
+              <p>         JOptionPane.showMessageDialog(null, res+" dólares hongkongeanos");</p>
+              <p>         break;</p>
+              <p>     default:</p>
+              <p>         break;</p>
+               <p>}</p>
+
+
+
+
+           <p>}//Fin main</p>
+
+      <p>}//Fin de la clase</p>
+
+        <br><br><hr><br><br>
+           <center><h3>Código de Ruby</h3></center>
+           <p>puts("1.Dolar")</p>
+           <p>puts("2.Euro")</p>
+           <p>puts("3.Yen")</p>
+           <p>puts("4.Dolar Hong Kong")</p>
+           <p>x = gets().to_i</p>
+           <p>puts("Ingrese la cantidad de pesos que desee convertir")</p>
+           <p>n = gets().to_f</p>
+           <p>case x</p>
+           <p>when 1</p>
+           <p>puts("#{n*0.042} dólares")</p>
+           <p>when 2</p>
+           <p>puts("#{n*0.039} euros")</p>
+           <p>when 3</p>
+           <p>puts("#{n*4.47} yen")</p>
+           <p>when 4</p>
+          <p>puts("#{n*0.32} dolar honkongeano")</p>
+          <p>end</p>
+
+
+  <br><br><hr><br><br>
+   <a href="Tareas.html">Menú de Tareas</a>
+   <a href="Tarea10.html">Siguiente Tarea</a>
+   <a href="Tarea8.html">Tarea Anterior</a>
+ </body>
+</html>
