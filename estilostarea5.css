@@ -1,0 +1,47 @@
+p{
+  font-size: 30 px
+}
+
+.scheme{
+  width: 264px;
+  height: 264px;
+}
+.simbolos{
+  width: 530px;
+  height: 210px;
+}
+.booleanos{
+  width: 449px;
+  height: 230px;
+}
+.numeros{
+  width: 300px;
+  height: 300px;
+}
+.cadenas{
+  width: 720px;
+  height: 120px;
+}
+.sintaxis{
+  width: 400px;
+  height: 200px;
+}
+.esqueletoscheme{
+  width: 414px;
+  height: 225px;
+}
+.racket{
+  width: 661px;
+  height: 348px;
+}
+.programascheme{
+  width: 400px;
+  height: 306px;
+}
+.multiparadigma{
+  width: 440px;
+  height: 280px;
+}
+body{
+  background-image:url(../imágenes/fondo.jpg);
+}

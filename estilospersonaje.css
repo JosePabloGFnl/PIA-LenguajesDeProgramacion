@@ -1,0 +1,47 @@
+p{
+  font-size: 30 px
+}
+
+.stallman{
+  width: 400px;
+  height: 200px;
+}
+.gnu{
+  width: 312px;
+  height: 141px;
+}
+.youngstallman{
+  width: 270px;
+  height: 187px;
+}
+.rockefeller{
+  width: 600px;
+  height: 200px;
+}
+.youngstallman2{
+  width: 400px;
+  height: 326px;
+}
+.linux{
+  width: 450px;
+  height: 253px;
+}
+.unix{
+  width: 490px;
+  height: 135px;
+}
+.mit{
+  width: 600px;
+  height: 400px;
+}
+.gnulinux{
+  width: 200px;
+  height: 363px;
+}
+.fsf{
+  width: 312px;
+  height: 141px;
+}
+body{
+  background-image:url(../imágenes/fondo.jpg);
+}

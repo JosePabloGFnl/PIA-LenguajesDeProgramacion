@@ -1,0 +1,47 @@
+p{
+  font-size: 30 px
+}
+
+.strat{
+  width: 260px;
+  height: 352px;
+}
+.switch{
+  width: 800px;
+  height: 525px;
+}
+.mother3{
+  width: 880px;
+  height: 245px;
+}
+.luigi{
+  width: 800px;
+  height: 275px;
+}
+.dune{
+  width: 121px;
+  height: 299px;
+}
+.coding{
+  width: 550px;
+  height: 370px;
+}
+.terry{
+  width: 780px;
+  height: 328px;
+}
+.cloud{
+  width: 880px;
+  height: 400px;
+}
+.ffvii{
+  width: 220px;
+  height: 218px;
+}
+.persona5{
+  width: 225px;
+  height: 323px;
+}
+body{
+  background-image:url(../imágenes/fondo.jpg);
+}

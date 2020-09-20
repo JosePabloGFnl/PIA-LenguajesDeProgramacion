@@ -1,0 +1,47 @@
+p{
+  font-size: 30 px
+}
+
+.python{
+  width: 580px;
+  height: 220px;
+}
+.simbolos{
+  width: 530px;
+  height: 210px;
+}
+.comparacion{
+  width: 379px;
+  height: 137px;
+}
+.aritmeticos{
+  width: 300px;
+  height: 300px;
+}
+.asignacion{
+  width: 528px;
+  height: 349px;
+}
+.sintaxis{
+  width: 400px;
+  height: 200px;
+}
+.esqueletopython{
+  width: 573px;
+  height: 175px;
+}
+.ingresodedatos{
+  width: 551px;
+  height: 236px;
+}
+.pycharm{
+  width: 655px;
+  height: 254px;
+}
+.multiparadigma{
+  width: 440px;
+  height: 280px;
+}
+body{
+  background-image:url(../imágenes/fondo.jpg);
+}

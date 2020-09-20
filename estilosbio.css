@@ -1,0 +1,43 @@
+p{
+  font-size: 30 px
+}
+
+.bby{
+  width: 660px;
+  height: 352px;
+}
+.victoria{
+  width: 824px;
+  height: 380px;
+}
+.pei{
+  width: 824px;
+  height: 504px;
+}
+.diego{
+  width: 520px;
+  height: 340px;
+}
+.uoa{
+  width: 599px;
+  height: 280px;
+}
+.nico{
+  width: 520px;
+  height: 340px;
+}
+.secu{
+  width: 760px;
+  height: 410px;
+}
+.cbtis{
+  width: 1080px;
+  height: 760px;
+}
+.fime{
+  width: 824px;
+  height: 236px;
+}
+body{
+  background-image:url(../imágenes/fondo.jpg);
+}
